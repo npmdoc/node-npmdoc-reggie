@@ -1,0 +1,1159 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a>reggie (v0.2.1)</a>
+</h1>
+<h4>An experimental light weight alternative to a full blown npm registry</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.reggie">module reggie</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.reggie.data">
+            function <span class="apidocSignatureSpan">reggie.</span>data
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">reggie.</span>bin</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">reggie.</span>data.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">reggie.</span>dependencies</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">reggie.</span>devDependencies</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">reggie.</span>engines</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">reggie.</span>optionalDependencies</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">reggie.</span>repository</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">reggie.</span>scripts</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">reggie.</span>author</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">reggie.</span>description</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">reggie.</span>name</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">reggie.</span>version</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.reggie.data">module reggie.data</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.reggie.data.data">
+            function <span class="apidocSignatureSpan">reggie.</span>data
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.reggie.data.prototype">module reggie.data.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.reggie.data.prototype._cp">
+            function <span class="apidocSignatureSpan">reggie.data.prototype.</span>_cp
+            <span class="apidocSignatureSpan">(from, to, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.reggie.data.prototype._destroyDir">
+            function <span class="apidocSignatureSpan">reggie.data.prototype.</span>_destroyDir
+            <span class="apidocSignatureSpan">(dir, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.reggie.data.prototype._doRegisterPackageVersion">
+            function <span class="apidocSignatureSpan">reggie.data.prototype.</span>_doRegisterPackageVersion
+            <span class="apidocSignatureSpan">(pjsonData, pathToPackage, fileStat, fileChecksum)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.reggie.data.prototype._findPackage">
+            function <span class="apidocSignatureSpan">reggie.data.prototype.</span>_findPackage
+            <span class="apidocSignatureSpan">(name, version, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.reggie.data.prototype._makeTempDir">
+            function <span class="apidocSignatureSpan">reggie.data.prototype.</span>_makeTempDir
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.reggie.data.prototype._mv">
+            function <span class="apidocSignatureSpan">reggie.data.prototype.</span>_mv
+            <span class="apidocSignatureSpan">(from, to, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.reggie.data.prototype._registerPackageVersion">
+            function <span class="apidocSignatureSpan">reggie.data.prototype.</span>_registerPackageVersion
+            <span class="apidocSignatureSpan">(pjsonData, pathToPackage)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.reggie.data.prototype.addPackage">
+            function <span class="apidocSignatureSpan">reggie.data.prototype.</span>addPackage
+            <span class="apidocSignatureSpan">(pathToPackage, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.reggie.data.prototype.deletePackage">
+            function <span class="apidocSignatureSpan">reggie.data.prototype.</span>deletePackage
+            <span class="apidocSignatureSpan">(name, version, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.reggie.data.prototype.getAllPackageNames">
+            function <span class="apidocSignatureSpan">reggie.data.prototype.</span>getAllPackageNames
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.reggie.data.prototype.index">
+            function <span class="apidocSignatureSpan">reggie.data.prototype.</span>index
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.reggie.data.prototype.init">
+            function <span class="apidocSignatureSpan">reggie.data.prototype.</span>init
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.reggie.data.prototype.loadPackage">
+            function <span class="apidocSignatureSpan">reggie.data.prototype.</span>loadPackage
+            <span class="apidocSignatureSpan">(pathToPackage, expectedName, expectedVersion, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.reggie.data.prototype.openPackageStream">
+            function <span class="apidocSignatureSpan">reggie.data.prototype.</span>openPackageStream
+            <span class="apidocSignatureSpan">(name, version, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.reggie.data.prototype.packageMeta">
+            function <span class="apidocSignatureSpan">reggie.data.prototype.</span>packageMeta
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.reggie.data.prototype.reloadPackages">
+            function <span class="apidocSignatureSpan">reggie.data.prototype.</span>reloadPackages
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.reggie.data.prototype.updatePackageMetadata">
+            function <span class="apidocSignatureSpan">reggie.data.prototype.</span>updatePackageMetadata
+            <span class="apidocSignatureSpan">(pjsonData)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.reggie.data.prototype.whichVersions">
+            function <span class="apidocSignatureSpan">reggie.data.prototype.</span>whichVersions
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.reggie" id="apidoc.module.reggie">module reggie</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.reggie.data" id="apidoc.element.reggie.data">
+        function <span class="apidocSignatureSpan">reggie.</span>data
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Data(opts) {
+  opts = opts || {};
+
+  // directories
+  this._rootDir = opts.dataDirectory || path.join(process.cwd(), 'data');
+  this._packagesDir = path.join(this._rootDir, 'packages');
+  this._jsonDir = path.join(this._rootDir, 'json');
+  this._tempDir = path.join(this._rootDir, 'temp');
+  this._registryUrl = opts.registryUrl;
+
+  this._packageMap = {}
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.reggie.data" id="apidoc.module.reggie.data">module reggie.data</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.reggie.data.data" id="apidoc.element.reggie.data.data">
+        function <span class="apidocSignatureSpan">reggie.</span>data
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Data(opts) {
+  opts = opts || {};
+
+  // directories
+  this._rootDir = opts.dataDirectory || path.join(process.cwd(), 'data');
+  this._packagesDir = path.join(this._rootDir, 'packages');
+  this._jsonDir = path.join(this._rootDir, 'json');
+  this._tempDir = path.join(this._rootDir, 'temp');
+  this._registryUrl = opts.registryUrl;
+
+  this._packageMap = {}
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.reggie.data.prototype" id="apidoc.module.reggie.data.prototype">module reggie.data.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.reggie.data.prototype._cp" id="apidoc.element.reggie.data.prototype._cp">
+        function <span class="apidocSignatureSpan">reggie.data.prototype.</span>_cp
+        <span class="apidocSignatureSpan">(from, to, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_cp = function (from, to, callback) {
+  fs.createReadStream(from)
+    .on('end', function () {
+      return callback &amp;&amp; callback.call();
+    })
+    .pipe(fs.createWriteStream(to))
+    .on('error', callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+            else {
+              // move it
+              return self._mv(pathToPackage, expectedPackagePath, registerCallback);
+            }
+          }
+          else {
+            // copy it
+            return self.<span class="apidocCodeKeywordSpan">_cp</span>(pathToPackage, expectedPackagePath, registerCallback);
+          }
+        });
+      })
+  });
+}
+
+Data.prototype.deletePackage = function (name, version, callback) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.reggie.data.prototype._destroyDir" id="apidoc.element.reggie.data.prototype._destroyDir">
+        function <span class="apidocSignatureSpan">reggie.data.prototype.</span>_destroyDir
+        <span class="apidocSignatureSpan">(dir, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_destroyDir = function (dir, callback) {
+  callback = callback || function (){};
+  rimraf(dir, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        readJson(pJsonPath, function (err, pjsonData) {
+if (err) {
+  console.error("Data.loadPackage: Error loading package.json " + pJsonPath + ' for ' + pathToPackage);
+  return callback &amp;&amp; callback.call(this, err);
+}
+
+// we don't need it anymore, destroy our temp directory out of band
+self.<span class="apidocCodeKeywordSpan">_destroyDir</span>(dir);
+
+// TODO do something with the package.json data
+var name = pjsonData.name;
+var version = pjsonData.version;
+var expectedPackagePath = path.join(self._packagesDir, name + '-' + version + '.tgz');
+
+// check that the packaged we received is what we expect
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.reggie.data.prototype._doRegisterPackageVersion" id="apidoc.element.reggie.data.prototype._doRegisterPackageVersion">
+        function <span class="apidocSignatureSpan">reggie.data.prototype.</span>_doRegisterPackageVersion
+        <span class="apidocSignatureSpan">(pjsonData, pathToPackage, fileStat, fileChecksum)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_doRegisterPackageVersion = function (pjsonData, pathToPackage, fileStat, fileChecksum) {
+  var version = pjsonData.version;
+  var pkg = this.updatePackageMetadata(pjsonData);
+  var name = pkg.name;
+
+  var versionData = {};
+
+  for (var k in pjsonData) {
+    versionData[k] = pjsonData[k];
+  }
+  if (!versionData.dist) {
+    versionData.dist = {};
+  }
+  versionData.dist.tarball = this._registryUrl + name + '/-/' + path.basename(pathToPackage);
+  versionData.dist.shasum = fileChecksum;
+
+  pkg.versions[version] = {
+    data: versionData,
+    pathToPackage: pathToPackage,
+    time: fileStat.mtime
+  };
+
+  console.log("Registered package " + name + "@" + version);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    return;
+  }
+  sha.get(pathToPackage, function(err, checksum) {
+    if (err) {
+      console.log('Cannot compute checksum of %s: %s', pathToPackage, err);
+      return;
+    }
+    this.<span class="apidocCodeKeywordSpan">_doRegisterPackageVersion</span>(pjsonData, pathToPackage, stat, checksum);
+  }.bind(this));
+}.bind(this));
+};
+
+Data.prototype._doRegisterPackageVersion = function(pjsonData, pathToPackage, fileStat, fileChecksum) {
+var version = pjsonData.version;
+var pkg = this.updatePackageMetadata(pjsonData);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.reggie.data.prototype._findPackage" id="apidoc.element.reggie.data.prototype._findPackage">
+        function <span class="apidocSignatureSpan">reggie.data.prototype.</span>_findPackage
+        <span class="apidocSignatureSpan">(name, version, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_findPackage = function (name, version, callback) {
+  var pkg = this._packageMap[name];
+  if (!pkg) return callback.call(undefined, new Error(name + " package not found"));
+  var versions = pkg.versions || {};
+  var pkgVersion = versions[version];
+  if (!pkgVersion) return callback.call(undefined, new Error(name + "@" + version + " package not found"));
+  var pathToPackage = pkgVersion.pathToPackage;
+  if (!pathToPackage) return callback.call(undefined, new Error(name + "@" + version + " package missing"));
+  return callback.call(undefined, null, pkgVersion);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  })
+  });
+}
+
+Data.prototype.deletePackage = function (name, version, callback) {
+  var self = this;
+
+  this.<span class="apidocCodeKeywordSpan">_findPackage</span>(name, version, function (error, pkg) {
+if (error) {
+  return callback.call(undefined, error);
+}
+
+// delete the package
+fs.unlink(pkg.pathToPackage, function (error) {
+  if (error) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.reggie.data.prototype._makeTempDir" id="apidoc.element.reggie.data.prototype._makeTempDir">
+        function <span class="apidocSignatureSpan">reggie.data.prototype.</span>_makeTempDir
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_makeTempDir = function (callback) {
+  var size = 16;
+  var self = this;
+  crypto.randomBytes(size, function(ex, buf) {
+    var dir = path.join(self._tempDir, buf.toString('hex'));
+    mkdirp(self._packagesDir , function (err) {
+      callback (err, dir);
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  if (typeof expectedName === 'function') {
+callback = expectedName;
+expectedName = expectedVersion = undefined;
+  }
+
+  // make a temp directory to extract each package
+  self.<span class="apidocCodeKeywordSpan">_makeTempDir</span>(function (err, dir) {
+if (err) {
+  console.error("Data.loadPackage: Failed to make directory " + dir);
+  throw err;
+}
+
+// unzip and extract
+fs.createReadStream(pathToPackage)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.reggie.data.prototype._mv" id="apidoc.element.reggie.data.prototype._mv">
+        function <span class="apidocSignatureSpan">reggie.data.prototype.</span>_mv
+        <span class="apidocSignatureSpan">(from, to, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_mv = function (from, to, callback) {
+  fs.rename(from, to, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  if (path.dirname(pathToPackage) === self._packagesDir) {
+    // is it named as expected?
+    if (expectedPackagePath === pathToPackage) {
+      return registerCallback();
+    }
+    else {
+      // move it
+      return self.<span class="apidocCodeKeywordSpan">_mv</span>(pathToPackage, expectedPackagePath, registerCallback);
+    }
+  }
+  else {
+    // copy it
+    return self._cp(pathToPackage, expectedPackagePath, registerCallback);
+  }
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.reggie.data.prototype._registerPackageVersion" id="apidoc.element.reggie.data.prototype._registerPackageVersion">
+        function <span class="apidocSignatureSpan">reggie.data.prototype.</span>_registerPackageVersion
+        <span class="apidocSignatureSpan">(pjsonData, pathToPackage)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_registerPackageVersion = function (pjsonData, pathToPackage) {
+  fs.stat(pathToPackage, function(err, stat) {
+    if (err) {
+      console.log('Cannot stat file %s: %s', pathToPackage, err);
+      return;
+    }
+    sha.get(pathToPackage, function(err, checksum) {
+      if (err) {
+        console.log('Cannot compute checksum of %s: %s', pathToPackage, err);
+        return;
+      }
+      this._doRegisterPackageVersion(pjsonData, pathToPackage, stat, checksum);
+    }.bind(this));
+  }.bind(this));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+if (expectedName &amp;&amp; expectedVersion &amp;&amp; (expectedName !== name || expectedVersion !== version)) {
+  return callback(new Error("Package rejected, expected " + expectedName + "@" + expectedVersion
+                            + ", received " + name + "@" + version));
+}
+
+var registerCallback = function(err) {
+  if (!err)
+    self.<span class="apidocCodeKeywordSpan">_registerPackageVersion</span>(pjsonData, expectedPackagePath);
+  return callback &amp;&amp; callback.apply(null, arguments);
+}
+
+// is package under our _packagesDir?
+if (path.dirname(pathToPackage) === self._packagesDir) {
+  // is it named as expected?
+  if (expectedPackagePath === pathToPackage) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.reggie.data.prototype.addPackage" id="apidoc.element.reggie.data.prototype.addPackage">
+        function <span class="apidocSignatureSpan">reggie.data.prototype.</span>addPackage
+        <span class="apidocSignatureSpan">(pathToPackage, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addPackage = function (pathToPackage, callback) {
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.reggie.data.prototype.deletePackage" id="apidoc.element.reggie.data.prototype.deletePackage">
+        function <span class="apidocSignatureSpan">reggie.data.prototype.</span>deletePackage
+        <span class="apidocSignatureSpan">(name, version, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">deletePackage = function (name, version, callback) {
+  var self = this;
+
+  this._findPackage(name, version, function (error, pkg) {
+    if (error) {
+      return callback.call(undefined, error);
+    }
+
+    // delete the package
+    fs.unlink(pkg.pathToPackage, function (error) {
+      if (error) {
+        return callback.call(undefined, error);
+      }
+
+      var pkg = self._packageMap[name];
+      var versions = pkg.versions || {};
+      delete versions[version];
+
+      // There are no more versions of this package, so we need to remove the package
+      // from the list of installed packages.
+      if (Object.getOwnPropertyNames(pkg.versions).length === 0) {
+        delete self._packageMap[name];
+      }
+
+      callback.call(undefined, null);
+    })
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  });
+});
+
+server.del('/package/:name/:version', function (req, res, next) {
+  var name = req.params.name;
+  var version = req.params.version;
+
+  data.<span class="apidocCodeKeywordSpan">deletePackage</span>(name, version, function (err) {
+    if (err) {
+      console.error("Error deleting package " + name + "@" + version + ": " + (err.message || err));
+      return res.send(500, err);
+    }
+    res.send(200);
+  });
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.reggie.data.prototype.getAllPackageNames" id="apidoc.element.reggie.data.prototype.getAllPackageNames">
+        function <span class="apidocSignatureSpan">reggie.data.prototype.</span>getAllPackageNames
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getAllPackageNames = function () {
+  return Object.keys(this._packageMap);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+});
+
+function listAction(req, res) {
+var result = {
+  _updated: 0
+};
+
+data.<span class="apidocCodeKeywordSpan">getAllPackageNames</span>()
+  .forEach(function(name) {
+    result[name] = getPackageInfo(name);
+  });
+
+res.json(200, result);
+
+function getPackageInfo(packageName) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.reggie.data.prototype.index" id="apidoc.element.reggie.data.prototype.index">
+        function <span class="apidocSignatureSpan">reggie.data.prototype.</span>index
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">index = function () {
+  var self = this;
+  var list = [];
+  var pkgNames = self.getAllPackageNames();
+  pkgNames.forEach(function (name) {
+    var versions = self.whichVersions(name).sort().reverse();
+    var version = versions[0];
+    var pkg = self._packageMap[name].versions[version];
+    list.push({
+      name: pkg.data.name,
+      description: pkg.data.description,
+      author: pkg.data.author,
+      version: version,
+      versions: versions
+    });
+  });
+  return list;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var range = req.params.range;
+if (range === 'latest')
+  range = 'x.x.x';
+returnPackageByRange(name, range, res);
+});
+
+server.get('/index', function (req, res) {
+res.send(data.<span class="apidocCodeKeywordSpan">index</span>());
+});
+
+server.get('/info/:name', function (req, res) {
+var name = req.params.name;
+var meta = data.packageMeta(name);
+if (!meta) return res.send(404);
+else return res.send(meta);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.reggie.data.prototype.init" id="apidoc.element.reggie.data.prototype.init">
+        function <span class="apidocSignatureSpan">reggie.data.prototype.</span>init
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">init = function (callback) {
+  var self = this;
+  async.series([
+    function (cb) { mkdirp(self._packagesDir, cb) },
+    function (cb) { mkdirp(self._jsonDir, cb) },
+    function (cb) { mkdirp(self._tempDir, cb) },
+  ], callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  dataDirectory: argv.data,
+  registryUrl: normalizeUrl(argv.url || 'http://' + argv.h + ':' + argv.p + '/')
+}
+
+var Data = require('./lib/data');
+var data = new Data(config);
+
+data.<span class="apidocCodeKeywordSpan">init</span>(function (err) {
+  console.log("Starting to load packages in " + data._packagesDir);
+  data.reloadPackages(function (err) {
+    if (err) throw err;
+    console.log("Done auto-loading packages")
+  });
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.reggie.data.prototype.loadPackage" id="apidoc.element.reggie.data.prototype.loadPackage">
+        function <span class="apidocSignatureSpan">reggie.data.prototype.</span>loadPackage
+        <span class="apidocSignatureSpan">(pathToPackage, expectedName, expectedVersion, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">loadPackage = function (pathToPackage, expectedName, expectedVersion, callback) {
+  var self = this;
+
+  if (typeof expectedName === 'function') {
+    callback = expectedName;
+    expectedName = expectedVersion = undefined;
+  }
+
+  // make a temp directory to extract each package
+  self._makeTempDir(function (err, dir) {
+    if (err) {
+      console.error("Data.loadPackage: Failed to make directory " + dir);
+      throw err;
+    }
+
+    // unzip and extract
+    fs.createReadStream(pathToPackage)
+      .pipe(zlib.createGunzip())
+      .on('error', function (err) {
+        console.error("Data.loadPackage: Error unzipping package " + pathToPackage)
+        return callback &amp;&amp; callback.call(undefined, err);
+      })
+      .pipe(tar.Extract({ path: dir }))
+      .on('error', function (err) {
+        console.error("Data.loadPackage: Error untarring package " + pathToPackage)
+        return callback &amp;&amp; callback.call(undefined, err);
+      })
+      .on('end', function () {
+        var pJsonPath = path.join(dir, 'package/package.json');
+        readJson(pJsonPath, function (err, pjsonData) {
+          if (err) {
+            console.error("Data.loadPackage: Error loading package.json " + pJsonPath + ' for ' + pathToPackage);
+            return callback &amp;&amp; callback.call(this, err);
+          }
+
+          // we don't need it anymore, destroy our temp directory out of band
+          self._destroyDir(dir);
+
+          // TODO do something with the package.json data
+          var name = pjsonData.name;
+          var version = pjsonData.version;
+          var expectedPackagePath = path.join(self._packagesDir, name + '-' + version + '.tgz');
+
+          // check that the packaged we received is what we expect
+          if (expectedName &amp;&amp; expectedVersion &amp;&amp; (expectedName !== name || expectedVersion !== version)) {
+            return callback(new Error("Package rejected, expected " + expectedName + "@" + expectedVersion
+                                      + ", received " + name + "@" + version));
+          }
+
+          var registerCallback = function(err) {
+            if (!err)
+              self._registerPackageVersion(pjsonData, expectedPackagePath);
+            return callback &amp;&amp; callback.apply(null, arguments);
+          }
+
+          // is package under our _packagesDir?
+          if (path.dirname(pathToPackage) === self._packagesDir) {
+            // is it named as expected?
+            if (expectedPackagePath === pathToPackage) {
+              return registerCallback();
+            }
+            else {
+              // move it
+              return self._mv(pathToPackage, expectedPackagePath, registerCallback);
+            }
+          }
+          else {
+            // copy it
+            return self._cp(pathToPackage, expectedPackagePath, registerCallback);
+          }
+        });
+      })
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  // write the tar file. Don't combine the streamed gzip and untar on upload just yet...
+  fs.writeFile(tempPackageFile, req.body, function(err) {
+    if (err) {
+console.error("Unexpected error when accepting package upload: " + (err.message || err));
+return res.send(500, err);
+    }
+
+    data.<span class="apidocCodeKeywordSpan">loadPackage</span>(tempPackageFile, name, version, function (err) {
+if (err) {
+  console.error("Error loading package from upload: " + (err.message || err));
+  fs.unlink(tempPackageFile);
+  return res.send(500, err);
+}
+
+fs.unlink(tempPackageFile);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.reggie.data.prototype.openPackageStream" id="apidoc.element.reggie.data.prototype.openPackageStream">
+        function <span class="apidocSignatureSpan">reggie.data.prototype.</span>openPackageStream
+        <span class="apidocSignatureSpan">(name, version, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">openPackageStream = function (name, version, callback) {
+  this._findPackage(name, version, function (error, pkg) {
+    if (error) {
+      callback.call(undefined, error);
+    }
+    else {
+      callback.call(undefined, null, fs.createReadStream(pkg.pathToPackage));
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  return res.send(404)
+}
+
+var filename = name + '-' + version + '.tgz';
+res.contentType = 'application/x-compressed';
+res.header( "Content-Disposition", "filename=" + filename );
+
+data.<span class="apidocCodeKeywordSpan">openPackageStream</span>(name, version, function (err, stream) {
+  if (err) {
+    console.error("Error streaming package: " + (err.message || err));
+    res.send(500, err);
+  }
+  stream
+    .pipe(res)
+    .on('error', function (err) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.reggie.data.prototype.packageMeta" id="apidoc.element.reggie.data.prototype.packageMeta">
+        function <span class="apidocSignatureSpan">reggie.data.prototype.</span>packageMeta
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">packageMeta = function (name) {
+  var pkg = this._packageMap[name];
+  return pkg;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+server.get('/index', function (req, res) {
+  res.send(data.index());
+});
+
+server.get('/info/:name', function (req, res) {
+  var name = req.params.name;
+  var meta = data.<span class="apidocCodeKeywordSpan">packageMeta</span>(name);
+  if (!meta) return res.send(404);
+  else return res.send(meta);
+});
+
+// ----------------------------------------------------------------------------
+// NPM registry protocol
+// ----------------------------------------------------------------------------
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.reggie.data.prototype.reloadPackages" id="apidoc.element.reggie.data.prototype.reloadPackages">
+        function <span class="apidocSignatureSpan">reggie.data.prototype.</span>reloadPackages
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">reloadPackages = function (callback) {
+  var self = this;
+  var concurrency = 25;
+
+  var q = async.queue(function (file, cb) {
+    self.loadPackage (file, cb);
+  }, concurrency);
+
+  fs.readdir(this._packagesDir, function (err, files) {
+    files = (!files) ? [] : files.map(function(file) { return path.join(self._packagesDir, file) });
+    if (files.length &gt; 0)
+      q.push(files);
+    else
+      callback.call();
+  });
+
+  if (callback) { q.drain = callback }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+var Data = require('./lib/data');
+var data = new Data(config);
+
+data.init(function (err) {
+console.log("Starting to load packages in " + data._packagesDir);
+data.<span class="apidocCodeKeywordSpan">reloadPackages</span>(function (err) {
+  if (err) throw err;
+  console.log("Done auto-loading packages")
+});
+});
+
+function normalizeUrl(url) {
+if (url.match(/\/$/))
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.reggie.data.prototype.updatePackageMetadata" id="apidoc.element.reggie.data.prototype.updatePackageMetadata">
+        function <span class="apidocSignatureSpan">reggie.data.prototype.</span>updatePackageMetadata
+        <span class="apidocSignatureSpan">(pjsonData)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">updatePackageMetadata = function (pjsonData) {
+  var name = pjsonData.name;
+  var pkg = this._packageMap[name] = this._packageMap[name] || {};
+
+  pkg.name = pjsonData.name;
+  pkg.description = pjsonData.description;
+  pkg.author = pjsonData.author;
+  pkg.repository = pjsonData.repository;
+  pkg.dependencies = pjsonData.dependencies;
+  pkg.readme = pjsonData.readme;
+  pkg.versions = pkg.versions || {};
+
+  return pkg;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+server.get('/-/all/since', listAction);
+server.get('/-/all', listAction);
+
+server.put('/:name', function (req, res) {
+  // TODO verify that req.params.name is the same as req.body.name
+  data.<span class="apidocCodeKeywordSpan">updatePackageMetadata</span>(req.body);
+  res.json(200, { ok: true });
+});
+
+function notFound(res) {
+  return res.json(404, { error: "not_found", reason: "document not found" });
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.reggie.data.prototype.whichVersions" id="apidoc.element.reggie.data.prototype.whichVersions">
+        function <span class="apidocSignatureSpan">reggie.data.prototype.</span>whichVersions
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">whichVersions = function (name) {
+  var pkg = this._packageMap[name];
+  var versions = pkg.versions || {};
+  return (pkg) ? Object.keys(versions) : [];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  }
+  res.send(200);
+});
+});
+
+server.get('/versions/:name', function (req, res) {
+var name = req.params.name;
+res.send(data.<span class="apidocCodeKeywordSpan">whichVersions</span>(name));
+});
+
+server.get('/package/:name/:range', function (req, res, next) {
+var name = req.params.name;
+var range = req.params.range;
+if (range === 'latest')
+  range = 'x.x.x';
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
